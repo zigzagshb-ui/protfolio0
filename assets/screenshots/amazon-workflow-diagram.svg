@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f17"/>
+      <stop offset="100%" stop-color="#171724"/>
+    </linearGradient>
+    <linearGradient id="goldNode" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3d078"/>
+      <stop offset="100%" stop-color="#b88d22"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b1b28"/>
+      <stop offset="100%" stop-color="#14141e"/>
+    </linearGradient>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="16" fill="url(#bgGrad2)"/>
+  <rect width="900" height="480" rx="16" fill="none" stroke="rgba(212, 175, 55, 0.2)" stroke-width="1.5"/>
+
+  <!-- Grid dots -->
+  <pattern id="gridDots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.05)"/>
+  </pattern>
+  <rect width="900" height="480" fill="url(#gridDots)"/>
+
+  <!-- Header Banner -->
+  <text x="450" y="48" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#f5d77f" text-anchor="middle" letter-spacing="1">
+    AMAZON SP-API &amp; n8n FINANCIAL AUTOMATION WORKFLOW
+  </text>
+  <text x="450" y="74" font-family="'Inter', -apple-system, sans-serif" font-size="12" fill="#8e92a8" text-anchor="middle">
+    Tested on Real Amazon UAE Account • LWA Authentication • Automated Settlement &amp; Order Pipeline
+  </text>
+
+  <!-- Connecting Lines -->
+  <path d="M 230 240 L 330 240" stroke="url(#goldNode)" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <polygon points="330,235 342,240 330,245" fill="#f3d078"/>
+
+  <path d="M 540 240 L 640 240" stroke="url(#goldNode)" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <polygon points="640,235 652,240 640,245" fill="#f3d078"/>
+
+  <!-- Step 1: Amazon Seller Partner API -->
+  <g transform="translate(60, 150)">
+    <rect width="180" height="180" rx="12" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+    <rect width="40" height="40" rx="8" x="70" y="24" fill="#252538" stroke="#d4af37" stroke-width="1"/>
+    <text x="90" y="49" font-family="sans-serif" font-size="18" fill="#d4af37" text-anchor="middle" font-weight="bold">A</text>
+    <text x="90" y="92" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">Amazon UAE</text>
+    <text x="90" y="112" font-family="'Inter', sans-serif" font-size="11" fill="#d4af37" text-anchor="middle">SP-API &amp; LWA</text>
+    <line x1="20" y1="126" x2="160" y2="126" stroke="rgba(255,255,255,0.08)"/>
+    <text x="90" y="146" font-family="'Inter', sans-serif" font-size="10" fill="#9094a6" text-anchor="middle">Orders &amp; Settlements</text>
+    <text x="90" y="162" font-family="'Inter', sans-serif" font-size="10" fill="#9094a6" text-anchor="middle">Fee &amp; Refund Records</text>
+  </g>
+
+  <!-- Step 2: n8n Workflow Engine -->
+  <g transform="translate(350, 130)">
+    <rect width="200" height="220" rx="14" fill="url(#cardGrad)" stroke="#d4af37" stroke-width="1.5" filter="url(#glowEffect)"/>
+    <rect width="46" height="46" rx="10" x="77" y="20" fill="#2a2318" stroke="#f3d078" stroke-width="1.5"/>
+    <text x="100" y="50" font-family="sans-serif" font-size="20" fill="#f3d078" text-anchor="middle" font-weight="bold">⚙</text>
+    <text x="100" y="94" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">n8n Engine</text>
+    <text x="100" y="114" font-family="'Inter', sans-serif" font-size="11" fill="#f3d078" text-anchor="middle">Automation &amp; Logic</text>
+    <line x1="20" y1="130" x2="180" y2="130" stroke="rgba(255,255,255,0.1)"/>
+    <text x="100" y="152" font-family="'Inter', sans-serif" font-size="11" fill="#c3c6d8" text-anchor="middle">• Token Refresh (OAuth)</text>
+    <text x="100" y="172" font-family="'Inter', sans-serif" font-size="11" fill="#c3c6d8" text-anchor="middle">• JSON Parser &amp; Mapper</text>
+    <text x="100" y="192" font-family="'Inter', sans-serif" font-size="11" fill="#c3c6d8" text-anchor="middle">• Error Recovery &amp; Retry</text>
+  </g>
+
+  <!-- Step 3: Google Sheets & Reporting -->
+  <g transform="translate(660, 150)">
+    <rect width="180" height="180" rx="12" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+    <rect width="40" height="40" rx="8" x="70" y="24" fill="#1b2e25" stroke="#34d399" stroke-width="1"/>
+    <text x="90" y="49" font-family="sans-serif" font-size="18" fill="#34d399" text-anchor="middle" font-weight="bold">▦</text>
+    <text x="90" y="92" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">Google Sheets</text>
+    <text x="90" y="112" font-family="'Inter', sans-serif" font-size="11" fill="#34d399" text-anchor="middle">Structured Review</text>
+    <line x1="20" y1="126" x2="160" y2="126" stroke="rgba(255,255,255,0.08)"/>
+    <text x="90" y="146" font-family="'Inter', sans-serif" font-size="10" fill="#9094a6" text-anchor="middle">Clean Financial Tables</text>
+    <text x="90" y="162" font-family="'Inter', sans-serif" font-size="10" fill="#9094a6" text-anchor="middle">Auditable Audit Trail</text>
+  </g>
+
+  <!-- Bottom Outcomes Pill Bar -->
+  <g transform="translate(150, 400)">
+    <rect width="600" height="42" rx="21" fill="rgba(255,255,255,0.03)" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
+    <circle cx="36" cy="21" r="5" fill="#34d399"/>
+    <text x="52" y="25" font-family="'Inter', sans-serif" font-size="12" fill="#d1d5db">
+      Verified Outcomes: Automated Data Flow  |  No Fragmented Scraping  |  Clear Financial Structure
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Portfolio of Marwan Mohammed - Software developer specializing in workflow automation, n8n, Amazon SP-API, REST API integrations, and practical business tools." />
+  <meta name="author" content="Marwan Mohammed" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <title>Marwan Mohammed | Software Developer | AI & Automation</title>
+
+  <!-- Google Fonts: Space Grotesk (EN headings), Inter (EN body), Cairo (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 3D Code Canvas Background -->
+  <canvas id="code-canvas" aria-hidden="true" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.55;"></canvas>
+  <!-- Ambient Background Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       1. Header & Navigation Bar
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container nav-wrapper">
+      <!-- Brand Logo / Profile Photo -->
+      <a href="#hero" class="brand-logo" aria-label="Marwan Mohammed - Home">
+        <div class="logo-badge logo-photo" aria-hidden="true">
+          <img src="assets/images/profile.jpg" alt="Marwan Mohammed" class="logo-profile-img" onerror="this.style.display='none';this.parentElement.textContent='MM'" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name" data-i18n="hero.name">Marwan Mohammed</span>
+          <span class="brand-role" data-i18n="about.profileRole">Software Developer</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link active" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <!-- Action Controls (Language, Theme, Mobile Menu) -->
+      <div class="nav-actions">
+        <!-- Language Switcher Button -->
+        <button type="button" id="lang-switch-btn" class="lang-switch-btn" aria-label="Switch language to Arabic" title="Switch language to Arabic">
+          <span class="lang-indicator" aria-hidden="true">🌐</span>
+          <span id="lang-btn-text">العربية</span>
+        </button>
+
+        <!-- Dark/Light Theme Toggle Button -->
+        <button type="button" id="theme-toggle-btn" class="icon-button" aria-label="Toggle light or dark theme" title="Toggle light or dark theme">
+          <span id="theme-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle mobile navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =======================================================================
+         2. Hero Section
+         ======================================================================= -->
+    <section id="hero" class="hero-section section">
+      <div class="container hero-content">
+        <!-- Status Pill -->
+        <div class="status-pill reveal">
+          <span class="status-indicator-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.status">Building Practical Automation Solutions</span>
+        </div>
+
+        <!-- Name & Title -->
+        <h1 class="hero-name reveal" data-i18n="hero.name">Marwan Mohammed</h1>
+        <h2 class="hero-title reveal" data-i18n="hero.title">Software Developer | AI & Automation</h2>
+
+        <!-- Introduction Paragraph -->
+        <p class="hero-description reveal" data-i18n="hero.description">
+          I build practical software solutions that automate repetitive tasks, connect business systems, and turn complex data into useful insights. My focus is on workflow automation, API integration, and AI-assisted development that solves real operational problems.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">View Projects</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero.btnContact">Contact Me</a>
+        </div>
+
+        <!-- Highlights Ribbon -->
+        <div class="hero-highlights reveal">
+          <div class="highlight-item">
+            <div class="highlight-title" data-i18n="hero.highlight1Title">Workflow Automation</div>
+            <div class="highlight-desc" data-i18n="hero.highlight1Desc">n8n & operational pipelines</div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-title" data-i18n="hero.highlight2Title">API Integrations</div>
+            <div class="highlight-desc" data-i18n="hero.highlight2Desc">Amazon SP-API & REST</div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-title" data-i18n="hero.highlight3Title">Data Structuring</div>
+            <div class="highlight-desc" data-i18n="hero.highlight3Desc">Clean review & reporting</div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-title" data-i18n="hero.highlight4Title">AI-Assisted Dev</div>
+            <div class="highlight-desc" data-i18n="hero.highlight4Desc">Prompt & logic design</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. About Me Section
+         ======================================================================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="about.badge">About Me</span>
+          <h2 class="section-title" data-i18n="about.title">Practical Mindset, Measured Solutions</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">Developer background, approach, and professional philosophy</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Column 1: Portrait / Monogram Card -->
+          <div class="profile-card reveal">
+            <div class="profile-media-wrapper">
+              <!-- Profile Image with automatic fallback -->
+              <img id="profile-img" src="assets/images/profile.jpg" alt="Marwan Mohammed - Software Developer" class="profile-img" />
+              <!-- Graceful Initial Fallback Container -->
+              <div id="profile-fallback" class="profile-fallback" style="display: none;">
+                <div class="fallback-initials">MM</div>
+                <div class="fallback-tag" data-i18n="about.profileRole">Software Developer</div>
+              </div>
+            </div>
+
+            <div class="profile-info">
+              <h3 class="profile-name" data-i18n="hero.name">Marwan Mohammed</h3>
+              <div class="profile-role-tag" data-i18n="hero.title">Software Developer | AI & Automation</div>
+              
+              <div class="profile-badges">
+                <div class="profile-badge-item">
+                  <span class="profile-badge-label" data-i18n="about.badgeSpecialtyLabel">Specialty</span>
+                  <span class="profile-badge-value" data-i18n="about.badgeSpecialtyValue">Automation & APIs</span>
+                </div>
+                <div class="profile-badge-item">
+                  <span class="profile-badge-label" data-i18n="about.badgeAmazonLabel">Hands-on</span>
+                  <span class="profile-badge-value" data-i18n="about.badgeAmazonValue">Amazon UAE Account</span>
+                </div>
+                <div class="profile-badge-item">
+                  <span class="profile-badge-label" data-i18n="about.badgeMindsetLabel">Approach</span>
+                  <span class="profile-badge-value" data-i18n="about.badgeMindsetValue">Problem-Solving Mindset</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Bio & Philosophy -->
+          <div class="about-narrative reveal">
+            <p class="about-bio-text" data-i18n="about.bio">
+              I'm a software developer focused on building practical digital solutions for real business needs. My work combines programming, workflow automation, API integrations, data processing, and AI-assisted development. I have hands-on experience building an n8n-based Amazon financial automation workflow connected to a real Amazon UAE account. I approach development with a problem-solving mindset: understand the process, identify repetitive work, design a reliable solution, and make the resulting data easier to use. I'm continuously strengthening my programming fundamentals and expanding my skills in software engineering, AI, and automation.
+            </p>
+
+            <!-- Philosophy Callout Card -->
+            <div class="philosophy-card">
+              <span class="philosophy-tag" data-i18n="about.philosophyTag">Professional Philosophy</span>
+              <blockquote class="philosophy-quote" data-i18n="about.philosophyQuote">
+                "Build useful solutions first. Automate responsibly. Keep systems understandable, maintainable, and measurable."
+              </blockquote>
+            </div>
+
+            <!-- Pillars of Practical Engineering -->
+            <div class="pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-number">01</div>
+                <div class="pillar-title" data-i18n="about.pillar1Title">Understand Process</div>
+                <div class="pillar-desc" data-i18n="about.pillar1Desc">Map real operational workflows and locate bottlenecks before writing code.</div>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-number">02</div>
+                <div class="pillar-title" data-i18n="about.pillar2Title">Reliable Architecture</div>
+                <div class="pillar-desc" data-i18n="about.pillar2Desc">Build stable workflows with authentication, error handling, and auditability.</div>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-number">03</div>
+                <div class="pillar-title" data-i18n="about.pillar3Title">Actionable Data</div>
+                <div class="pillar-desc" data-i18n="about.pillar3Desc">Turn raw logs and complex JSON into clear, review-ready tables and sheets.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. Technical Skills Section
+         ======================================================================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="skills.badge">Technical Skills</span>
+          <h2 class="section-title" data-i18n="skills.title">Skills & Technologies</h2>
+          <p class="section-subtitle" data-i18n="skills.subtitle">Categorized competencies with honest, grounded representation of technologies</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- 1. Programming and Web Development -->
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="category-title" data-i18n="skills.cat1">Programming and Web Development</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+            </div>
+          </div>
+
+          <!-- 2. Automation and Integration -->
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="18" r="3"></circle>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                  <line x1="6" y1="9" x2="6" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="category-title" data-i18n="skills.cat2">Automation and Integration</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">n8n Workflow Automation</span>
+              <span class="skill-tag">REST API Integration</span>
+              <span class="skill-tag">Webhooks</span>
+              <span class="skill-tag">JSON Data Processing</span>
+              <span class="skill-tag">Amazon SP-API</span>
+              <span class="skill-tag">Login with Amazon (LWA)</span>
+            </div>
+          </div>
+
+          <!-- 3. Data and Reporting -->
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="category-title" data-i18n="skills.cat3">Data and Reporting</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">Google Sheets</span>
+              <span class="skill-tag">CSV Processing</span>
+              <span class="skill-tag">Financial Data Organization</span>
+              <span class="skill-tag">Automated Reporting</span>
+              <span class="skill-tag">Data Validation</span>
+            </div>
+          </div>
+
+          <!-- 4. AI-Assisted Development -->
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"></path>
+                  <line x1="9" y1="21" x2="15" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="category-title" data-i18n="skills.cat4">AI-Assisted Development</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">AI-Assisted Coding</span>
+              <span class="skill-tag">AI-Assisted Debugging</span>
+              <span class="skill-tag">Prompt Design</span>
+              <span class="skill-tag">LLM Integration Concepts</span>
+              <span class="skill-tag">AI Workflow Design</span>
+            </div>
+          </div>
+
+          <!-- 5. Infrastructure and Tools -->
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="category-title" data-i18n="skills.cat5">Infrastructure and Tools</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">Linux Fundamentals</span>
+              <span class="skill-tag">Docker Fundamentals</span>
+              <span class="skill-tag">VPS Deployment Fundamentals</span>
+              <span class="skill-tag">Git &amp; GitHub Fundamentals</span>
+              <span class="skill-tag learning-tag">
+                <span>SQL &amp; PostgreSQL</span>
+                <span class="learning-badge" data-i18n="skills.learningBadge">Currently developing</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. Featured Projects Section
+         ======================================================================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="projects.badge">Featured Projects</span>
+          <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
+          <p class="section-subtitle" data-i18n="projects.subtitle">Real automation solutions and planned software tools</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters reveal" role="tablist" aria-label="Project category filters">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true" data-i18n="projects.filterAll">All Projects</button>
+          <button type="button" class="filter-btn" data-filter="automation" role="tab" aria-selected="false" data-i18n="projects.filterAutomation">Automation &amp; APIs</button>
+          <button type="button" class="filter-btn" data-filter="data" role="tab" aria-selected="false" data-i18n="projects.filterData">Data &amp; Reporting</button>
+          <button type="button" class="filter-btn" data-filter="planned" role="tab" aria-selected="false" data-i18n="projects.filterPlanned">Planned &amp; Concepts</button>
+        </div>
+
+        <!-- Dynamic Grid Container -->
+        <div id="projects-container" class="projects-grid" aria-live="polite">
+          <!-- Populated by JavaScript with complete bilingual content and state -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. Professional Experience Section
+         ======================================================================= -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="experience.badge">Professional Experience</span>
+          <h2 class="section-title" data-i18n="experience.title">Experience &amp; Background</h2>
+          <p class="section-subtitle" data-i18n="experience.subtitle">Practical e-commerce operations, marketplace workflows, and automation development</p>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true">01</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="role-title" data-i18n="experience.exp1Role">Workflow Automation Developer</h3>
+                <span class="role-date-badge" data-i18n="experience.exp1Date">Current</span>
+              </div>
+              <p class="role-description" data-i18n="experience.exp1Desc">
+                Designing and developing practical automation workflows using n8n, APIs, structured data, and AI-assisted development. Current work includes a financial data automation workflow connected to Amazon UAE.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true">02</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="role-title" data-i18n="experience.exp2Role">Marketplace Operations and Data Workflows</h3>
+                <span class="role-date-badge" data-i18n="experience.exp2Date">Professional Background</span>
+              </div>
+              <p class="role-description" data-i18n="experience.exp2Desc">
+                Hands-on work with e-commerce marketplace operations, catalog data, pricing, orders, financial reporting, and operational processes. This experience informs the development of automation tools designed around real business workflows.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true">03</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="role-title" data-i18n="experience.exp3Role">Independent Software Projects</h3>
+                <span class="role-date-badge" data-i18n="experience.exp3Date">Ongoing</span>
+              </div>
+              <p class="role-description" data-i18n="experience.exp3Desc">
+                Building and refining software projects that combine programming, API integrations, workflow automation, data processing, and AI-assisted development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. Services Section
+         ======================================================================= -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="services.badge">Services</span>
+          <h2 class="section-title" data-i18n="services.title">What I Offer</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">Practical technical capabilities tailored for business efficiency</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Workflow Automation -->
+          <div class="service-card reveal">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.srv1Title">Workflow Automation</h3>
+            <p class="service-description" data-i18n="services.srv1Desc">
+              Automate repetitive operational tasks and connect processes into clear, maintainable workflows.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv1F1">Repetitive task elimination</span>
+              </div>
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv1F2">Error reduction &amp; retries</span>
+              </div>
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv1F3">Process synchronization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2: API Integration -->
+          <div class="service-card reveal">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.srv2Title">API Integration</h3>
+            <p class="service-description" data-i18n="services.srv2Desc">
+              Connect supported business systems and APIs to exchange, process, and organize data.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv2F1">Secure OAuth/LWA authentication</span>
+              </div>
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv2F2">Webhook event listening</span>
+              </div>
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv2F3">JSON data extraction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3: Data Processing and Reporting -->
+          <div class="service-card reveal">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.srv3Title">Data Processing and Reporting</h3>
+            <p class="service-description" data-i18n="services.srv3Desc">
+              Transform raw CSV, JSON, and spreadsheet data into structured reports that are easier to review.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv3F1">Financial record structuring</span>
+              </div>
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv3F2">Catalog data validation</span>
+              </div>
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv3F3">Google Sheets sync</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4: AI-Assisted Business Solutions -->
+          <div class="service-card reveal">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.srv4Title">AI-Assisted Business Solutions</h3>
+            <p class="service-description" data-i18n="services.srv4Desc">
+              Explore practical AI-powered workflows for content preparation, data classification, and operational support.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv4F1">Prompt engineering &amp; templates</span>
+              </div>
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv4F2">Assisted classification logic</span>
+              </div>
+              <div class="service-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="services.srv4F3">Operational task acceleration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. Career Objective Section
+         ======================================================================= -->
+    <section class="section objective-section">
+      <div class="container">
+        <div class="objective-banner reveal">
+          <span class="objective-tag" data-i18n="objective.tag">Career Objective</span>
+          <blockquote class="objective-quote" data-i18n="objective.quote">
+            "My goal is to become a stronger software and automation engineer by building reliable solutions that solve real business problems. I aim to combine solid programming fundamentals, thoughtful API integration, and practical AI capabilities to create software that saves effort, improves data visibility, and helps businesses operate more efficiently."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. Contact Section
+         ======================================================================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" data-i18n="contact.badge">Contact</span>
+          <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Let's connect regarding automation projects, APIs, or software opportunities</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Channels & Information -->
+          <div class="contact-info-card reveal">
+            <div class="contact-info-header">
+              <h3 data-i18n="contact.infoTitle">Let's Connect</h3>
+              <p data-i18n="contact.infoDesc">Feel free to reach out directly via WhatsApp or social channels to discuss your automation and development requirements.</p>
+            </div>
+
+            <div class="contact-channels">
+              <!-- WhatsApp -->
+              <a href="https://wa.me/201044714857" target="_blank" rel="noopener noreferrer" class="channel-link" aria-label="Send direct message on WhatsApp to +201044714857">
+                <div class="channel-icon whatsapp" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.05 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-name" data-i18n="contact.whatsappLabel">WhatsApp (Direct Message)</span>
+                  <span class="channel-value" dir="ltr">+201044714857</span>
+                </div>
+              </a>
+
+              <!-- Facebook Profile -->
+              <a href="https://www.facebook.com/marwan.mohamed.694914" target="_blank" rel="noopener noreferrer" class="channel-link" aria-label="Visit Facebook Profile">
+                <div class="channel-icon facebook" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-name" data-i18n="contact.facebookLabel">Facebook Profile</span>
+                  <span class="channel-value">Marwan Mohamed</span>
+                </div>
+              </a>
+
+              <!-- Instagram Platform Link -->
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="channel-link" aria-label="Visit Instagram">
+                <div class="channel-icon instagram" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-name" data-i18n="contact.instagramLabel">Instagram</span>
+                  <span class="channel-value">Instagram Profile</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="availability-notice">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span data-i18n="contact.availability">Available for freelance automation projects and technical opportunities.</span>
+            </div>
+          </div>
+
+          <!-- Right: Frontend-Only Contact Form -->
+          <div class="contact-form-card reveal">
+            <form id="portfolio-contact-form" novalidate>
+              <!-- Name Input -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label" data-i18n="contact.formNameLabel">Your Name</label>
+                <input 
+                  type="text" 
+                  id="contact-name" 
+                  name="name" 
+                  class="form-input" 
+                  data-i18n-attr="placeholder:contact.formNamePlaceholder" 
+                  placeholder="e.g., Sarah Johnson" 
+                  required 
+                  minlength="2" 
+                />
+                <div class="form-error" data-i18n="contact.errName">Please enter your name (at least 2 characters).</div>
+              </div>
+
+              <!-- Email Input -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label" data-i18n="contact.formEmailLabel">Email Address</label>
+                <input 
+                  type="email" 
+                  id="contact-email" 
+                  name="email" 
+                  class="form-input" 
+                  data-i18n-attr="placeholder:contact.formEmailPlaceholder" 
+                  placeholder="name@company.com" 
+                  required 
+                />
+                <div class="form-error" data-i18n="contact.errEmail">Please provide a valid email address.</div>
+              </div>
+
+              <!-- Message Input -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label" data-i18n="contact.formMessageLabel">Project Details / Message</label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  class="form-textarea" 
+                  data-i18n-attr="placeholder:contact.formMessagePlaceholder" 
+                  placeholder="Describe your automation goals, data challenges, or business requirements..." 
+                  required 
+                  minlength="10"
+                ></textarea>
+                <div class="form-error" data-i18n="contact.errMessage">Please enter your message (at least 10 characters).</div>
+              </div>
+
+              <!-- Clear Demo Disclaimer Notice -->
+              <div class="form-demo-disclaimer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span data-i18n="contact.formDisclaimer">
+                  Frontend Demo Notice: This contact form runs client-side for demonstration and needs a backend or form service (e.g., Formspree, EmailJS) to deliver messages. For immediate contact, please message directly via WhatsApp.
+                </span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary form-submit-btn" data-i18n="contact.formSubmitBtn">Send Message</button>
+
+              <!-- Feedback message alert box -->
+              <div id="form-feedback" class="form-feedback-message" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       10. Footer
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-name" data-i18n="hero.name">Marwan Mohammed</div>
+          <p class="footer-tagline" data-i18n="footer.tagline">Building practical software solutions, workflow automations, and API integrations that solve real operational problems.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Quick Navigation">
+          <a href="#hero" class="footer-nav-link" data-i18n="nav.home">Home</a>
+          <a href="#about" class="footer-nav-link" data-i18n="nav.about">About</a>
+          <a href="#skills" class="footer-nav-link" data-i18n="nav.skills">Skills</a>
+          <a href="#projects" class="footer-nav-link" data-i18n="nav.projects">Projects</a>
+          <a href="#experience" class="footer-nav-link" data-i18n="nav.experience">Experience</a>
+          <a href="#services" class="footer-nav-link" data-i18n="nav.services">Services</a>
+          <a href="#contact" class="footer-nav-link" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div id="footer-copyright-text">
+          &copy; <span id="current-year">2026</span> Marwan Mohammed. Built with care and a focus on practical solutions.
+        </div>
+
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to top">
+          <span data-i18n="footer.backToTop">Back to top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. Project Details Modal Dialog
+       ========================================================================= -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close project details modal">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-status-badge">
+          <span id="modal-status-badge" class="status-badge"></span>
+        </div>
+        <h3 id="modal-title" class="modal-title"></h3>
+      </div>
+
+      <div id="modal-image-preview" class="modal-image-preview" style="display: none;"></div>
+
+      <p id="modal-description" class="modal-description"></p>
+
+      <div class="modal-section-title" data-i18n="projects.modalTechLabel">Technologies Used</div>
+      <div id="modal-tech-list" class="modal-tech-list"></div>
+
+      <div id="modal-outcomes-title" class="modal-section-title" data-i18n="projects.modalOutcomesLabel" style="display: none;">Key Outcomes &amp; Architecture</div>
+      <div id="modal-outcomes-list" class="outcomes-list" style="display: none; margin-bottom: 1.5rem;"></div>
+
+      <div class="modal-actions">
+        <button type="button" id="modal-discuss-btn" class="btn btn-primary" data-i18n="projects.modalDiscussBtn">Discuss this Project</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
